@@ -1,7 +1,5 @@
 # language-scaffolder-prompts
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/travi/language-scaffolder-prompts.svg)](https://greenkeeper.io/)
-
 shared [Inquirer](https://www.npmjs.com/package/inquirer) prompt definitions for
 [language scaffolders](https://github.com/travi/project-scaffolder#languages-optional)
 used as part of the [project scaffolder](https://github.com/travi/project-scaffolder)
@@ -29,6 +27,7 @@ $ npm install @travi/language-scaffolder-prompts --save
 [![Commitizen friendly][commitizen-badge]][commitizen-link]
 [![semantic-release][semantic-release-badge]][semantic-release-link]
 [![PRs Welcome][PRs-badge]][PRs-link]
+[![Greenkeeper badge](https://badges.greenkeeper.io/travi/language-scaffolder-prompts.svg)](https://greenkeeper.io/)
 
 ### Dependencies
 
