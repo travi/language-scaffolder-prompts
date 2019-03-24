@@ -10,6 +10,12 @@ export default function ({vcs, ciServices, visibility}) {
       type: 'confirm',
       default: true
     },
+    {
+      name: questionNames.INTEGRATION_TESTS,
+      message: 'Will this project be integration tested?',
+      type: 'confirm',
+      default: true
+    },
     ...vcs
       ? [{
         name: questionNames.CI_SERVICE,

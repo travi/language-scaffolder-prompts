@@ -19,12 +19,20 @@ suite('questions', () => {
   test('that the confirmation about unit-testing is included', () => {
     assert.deepEqual(
       questions({}),
-      [{
-        name: questionNames.UNIT_TESTS,
-        message: 'Will this project be unit tested?',
-        type: 'confirm',
-        default: true
-      }]
+      [
+        {
+          name: questionNames.UNIT_TESTS,
+          message: 'Will this project be unit tested?',
+          type: 'confirm',
+          default: true
+        },
+        {
+          name: questionNames.INTEGRATION_TESTS,
+          message: 'Will this project be integration tested?',
+          type: 'confirm',
+          default: true
+        }
+      ]
     );
   });
 
