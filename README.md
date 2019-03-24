@@ -1,8 +1,8 @@
 # language-scaffolder-prompts
 
 shared [Inquirer](https://www.npmjs.com/package/inquirer) prompt definitions for
-[language scaffolders](https://www.npmjs.com/package/@travi/project-scaffolder#languages)
-used as part of the [project scaffolder](https://www.npmjs.com/package/@travi/project-scaffolder)
+[language scaffolders](https://github.com/travi/project-scaffolder#languages-optional)
+used as part of the [project scaffolder](https://github.com/travi/project-scaffolder)
 
 <!-- status badges -->
 [![Build Status][ci-badge]][ci-link]
