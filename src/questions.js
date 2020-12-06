@@ -2,7 +2,7 @@ import {Separator} from 'inquirer';
 import {questionNames} from './question-names';
 import filterChoicesByVisibility from './filter-by-visibility';
 
-export default function ({vcs, ciServices, visibility}) {
+export default function ({vcs, ciServices, visibility, pathWithinParent}) {
   return [
     {
       name: questionNames.UNIT_TESTS,
@@ -16,7 +16,7 @@ export default function ({vcs, ciServices, visibility}) {
       type: 'confirm',
       default: true
     },
-    ...vcs
+    ...vcs && !pathWithinParent
       ? [{
         name: questionNames.CI_SERVICE,
         type: 'list',

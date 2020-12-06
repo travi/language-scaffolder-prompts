@@ -36,7 +36,7 @@ suite('questions', () => {
     );
   });
 
-  test('that the ci-service choice is included when a project will be versioned', () => {
+  test('that the ci-service choice is included when a project will be versioned as the root project', () => {
     const ciServices = any.simpleObject();
     const visibility = any.word();
     const filteredCiServiceNames = any.listOf(any.word);
@@ -45,6 +45,24 @@ suite('questions', () => {
 
     assert.deepInclude(
       questions({vcs: any.simpleObject(), ciServices, visibility}),
+      {
+        name: questionNames.CI_SERVICE,
+        type: 'list',
+        message: 'Which continuous integration service will be used?',
+        choices: [...filteredCiServiceNames, new Separator(), 'Other']
+      }
+    );
+  });
+
+  test('that the ci-service choice is not included when a project will not be the root project', () => {
+    const ciServices = any.simpleObject();
+    const visibility = any.word();
+    const filteredCiServiceNames = any.listOf(any.word);
+    const filteredCiServices = any.objectWithKeys(filteredCiServiceNames);
+    choicesVisibilityFilter.default.withArgs(ciServices, visibility).returns(filteredCiServices);
+
+    assert.notDeepInclude(
+      questions({vcs: any.simpleObject(), ciServices, visibility, pathWithinParent: any.string()}),
       {
         name: questionNames.CI_SERVICE,
         type: 'list',
