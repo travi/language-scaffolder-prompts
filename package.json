@@ -51,7 +51,7 @@
     "rimraf": "3.0.2",
     "rollup": "3.2.5",
     "rollup-plugin-auto-external": "2.0.0",
-    "sinon": "14.0.1"
+    "sinon": "14.0.2"
   },
   "peerDependencies": {
     "inquirer": "^6.0.0 || ^7.0.0 || ^8.0.0"
