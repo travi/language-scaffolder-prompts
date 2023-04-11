@@ -24,7 +24,7 @@ jobs:
           cache: npm
       - run: npm clean-install
       - run: npm test
-      - uses: codecov/codecov-action@91e184765dad936fb6df80d5af0decb809a33dac
+      - uses: codecov/codecov-action@40a12dcee2df644d47232dde008099a3e9e4f865
   release:
     needs:
       - verify
