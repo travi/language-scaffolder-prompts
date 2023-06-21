@@ -11,6 +11,7 @@
   "module": "lib/index.es.js",
   "sideEffects": false,
   "scripts": {
+    "pretest": "run-s build",
     "test": "npm-run-all --print-label --parallel lint:* --parallel test:*",
     "lint:sensitive": "ban",
     "test:unit": "cross-env NODE_ENV=test c8 run-s test:unit:base",
