@@ -3,19 +3,13 @@
   "description": "shared Inquirer prompt definitions for language scaffolders used as part of the project scaffolder",
   "license": "MIT",
   "version": "0.0.0-semantically-released",
-  "main": "lib/index.cjs.js",
-  "module": "lib/index.es.js",
-  "sideEffects": false,
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    "lib/"
-  ],
+  "author": "Matt Travi <npm@travi.org> (https://matt.travi.org/)",
   "repository": "travi/language-scaffolder-prompts",
   "bugs": "https://github.com/travi/language-scaffolder-prompts/issues",
   "homepage": "https://npm.im/@travi/language-scaffolder-prompts",
-  "author": "Matt Travi <npm@travi.org> (https://matt.travi.org/)",
+  "main": "lib/index.cjs.js",
+  "module": "lib/index.es.js",
+  "sideEffects": false,
   "scripts": {
     "test": "npm-run-all --print-label --parallel lint:* --parallel test:*",
     "lint:sensitive": "ban",
@@ -28,7 +22,15 @@
     "build:js": "rollup -c",
     "watch": "run-s 'build:js -- --watch'",
     "prepack": "run-s build",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint:publish": "publint"
+  },
+  "files": [
+    "lib/"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
   },
   "devDependencies": {
     "@babel/register": "7.22.5",
@@ -46,6 +48,7 @@
     "inquirer": "8.2.5",
     "mocha": "10.2.0",
     "npm-run-all": "4.1.5",
+    "publint": "0.1.12",
     "remark-cli": "11.0.0",
     "remark-preset-lint-travi": "5.0.2",
     "rimraf": "5.0.1",
