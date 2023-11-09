@@ -1,9 +1,11 @@
 import {Separator} from 'inquirer';
+
 import {assert} from 'chai';
 import any from '@travi/any';
 import sinon from 'sinon';
-import * as choicesVisibilityFilter from '../../src/filter-by-visibility';
-import {questions, questionNames} from '../../src';
+
+import * as choicesVisibilityFilter from '../../src/filter-by-visibility.js';
+import {questions, questionNames} from '../../src/index.js';
 
 suite('questions', () => {
   let sandbox;
