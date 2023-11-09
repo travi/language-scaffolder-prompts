@@ -54,7 +54,7 @@ $ npm test
 
 [npm-link]: https://www.npmjs.com/package/@travi/language-scaffolder-prompts
 
-[npm-badge]: https://img.shields.io/npm/v/@travi/language-scaffolder-prompts.svg
+[npm-badge]: https://img.shields.io/npm/v/@travi/language-scaffolder-prompts?logo=npm
 
 [license-link]: LICENSE
 
@@ -62,7 +62,7 @@ $ npm test
 
 [coverage-link]: https://codecov.io/github/travi/language-scaffolder-prompts
 
-[coverage-badge]: https://img.shields.io/codecov/c/github/travi/language-scaffolder-prompts.svg
+[coverage-badge]: https://img.shields.io/codecov/c/github/travi/language-scaffolder-prompts?logo=codecov
 
 [commit-convention-link]: https://conventionalcommits.org
 
