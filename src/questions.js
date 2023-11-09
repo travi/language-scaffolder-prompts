@@ -1,6 +1,7 @@
 import {Separator} from 'inquirer';
-import {questionNames} from './question-names';
-import filterChoicesByVisibility from './filter-by-visibility';
+
+import {questionNames} from './question-names.js';
+import filterChoicesByVisibility from './filter-by-visibility.js';
 
 export default function ({vcs, ciServices, visibility, pathWithinParent}) {
   return [

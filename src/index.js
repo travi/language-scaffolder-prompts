@@ -1,2 +1,2 @@
-export {default as questions} from './questions';
-export {questionNames} from './question-names';
+export {default as questions} from './questions.js';
+export {questionNames} from './question-names.js';
