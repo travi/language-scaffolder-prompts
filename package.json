@@ -46,7 +46,7 @@
     "cross-env": "7.0.3",
     "cz-conventional-changelog": "3.3.0",
     "husky": "9.0.11",
-    "inquirer": "8.2.6",
+    "inquirer": "9.3.5",
     "mocha": "10.6.0",
     "npm-run-all2": "6.2.2",
     "publint": "0.2.8",
@@ -58,6 +58,6 @@
     "sinon": "18.0.0"
   },
   "peerDependencies": {
-    "inquirer": "^6.0.0 || ^7.0.0 || ^8.0.0"
+    "inquirer": "^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0"
   }
 }
