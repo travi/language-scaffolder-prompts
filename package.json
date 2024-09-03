@@ -54,8 +54,7 @@
     "remark-preset-lint-travi": "6.0.5",
     "rimraf": "6.0.1",
     "rollup": "4.21.2",
-    "rollup-plugin-auto-external": "2.0.0",
-    "sinon": "18.0.0"
+    "rollup-plugin-auto-external": "2.0.0"
   },
   "peerDependencies": {
     "inquirer": "^6.0.0 || ^7.0.0 || ^8.0.0"

@@ -2,21 +2,12 @@ import {Separator} from 'inquirer';
 
 import {assert} from 'chai';
 import any from '@travi/any';
-import sinon from 'sinon';
 
-import * as choicesVisibilityFilter from '../../src/filter-by-visibility.js';
-import {questions, questionNames} from '../../src/index.js';
+import {questionNames, questions} from '../../src/index.js';
 
 suite('questions', () => {
-  let sandbox;
-
-  setup(() => {
-    sandbox = sinon.createSandbox();
-
-    sandbox.stub(choicesVisibilityFilter, 'default');
-  });
-
-  teardown(() => sandbox.restore());
+  const ciServiceNames = any.listOf(any.word);
+  const ciServices = any.objectWithKeys(ciServiceNames);
 
   test('that the confirmation about unit-testing is included', () => {
     assert.deepEqual(
@@ -39,11 +30,7 @@ suite('questions', () => {
   });
 
   test('that the ci-service choice is included when a project will be versioned as the root project', () => {
-    const ciServices = any.simpleObject();
     const visibility = any.word();
-    const filteredCiServiceNames = any.listOf(any.word);
-    const filteredCiServices = any.objectWithKeys(filteredCiServiceNames);
-    choicesVisibilityFilter.default.withArgs(ciServices, visibility).returns(filteredCiServices);
 
     assert.deepInclude(
       questions({vcs: any.simpleObject(), ciServices, visibility}),
@@ -51,17 +38,13 @@ suite('questions', () => {
         name: questionNames.CI_SERVICE,
         type: 'list',
         message: 'Which continuous integration service will be used?',
-        choices: [...filteredCiServiceNames, new Separator(), 'Other']
+        choices: [...ciServiceNames, new Separator(), 'Other']
       }
     );
   });
 
   test('that the ci-service choice is not included when a project will not be the root project', () => {
-    const ciServices = any.simpleObject();
     const visibility = any.word();
-    const filteredCiServiceNames = any.listOf(any.word);
-    const filteredCiServices = any.objectWithKeys(filteredCiServiceNames);
-    choicesVisibilityFilter.default.withArgs(ciServices, visibility).returns(filteredCiServices);
 
     assert.notDeepInclude(
       questions({vcs: any.simpleObject(), ciServices, visibility, pathWithinParent: any.string()}),
@@ -69,7 +52,7 @@ suite('questions', () => {
         name: questionNames.CI_SERVICE,
         type: 'list',
         message: 'Which continuous integration service will be used?',
-        choices: [...filteredCiServiceNames, new Separator(), 'Other']
+        choices: [...ciServiceNames, new Separator(), 'Other']
       }
     );
   });
