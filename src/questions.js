@@ -1,5 +1,3 @@
-import {Separator} from 'inquirer';
-
 import {questionNames} from './question-names.js';
 
 export default function ({vcs, ciServices, pathWithinParent}) {
@@ -21,7 +19,7 @@ export default function ({vcs, ciServices, pathWithinParent}) {
         name: questionNames.CI_SERVICE,
         type: 'list',
         message: 'Which continuous integration service will be used?',
-        choices: [...Object.keys(ciServices), new Separator(), 'Other']
+        choices: [...Object.keys(ciServices), 'Other']
       }]
       : []
   ];
