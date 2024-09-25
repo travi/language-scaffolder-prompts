@@ -25,6 +25,7 @@
     "prepack": "run-s build",
     "prepare": "husky install",
     "lint:publish": "publint",
+    "lint:js:fix": "run-s 'lint:js -- --fix'",
     "lint:lockfile": "lockfile-lint"
   },
   "files": [
