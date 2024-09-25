@@ -35,6 +35,7 @@
     "access": "public",
     "provenance": true
   },
+  "packageManager": "npm@10.8.3+sha256.b7dc7eb48d7479b93668e913c7ad686ab2aa71c705d4a56b5323d1bffdba2972",
   "devDependencies": {
     "@babel/register": "7.24.6",
     "@travi/any": "3.1.2",
