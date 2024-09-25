@@ -3,19 +3,23 @@
   "description": "shared Inquirer prompt definitions for language scaffolders used as part of the project scaffolder",
   "license": "MIT",
   "version": "0.0.0-semantically-released",
+  "type": "module",
+  "engines": {
+    "node": "^18.19.0 || ^20.6.1 || >=22"
+  },
   "author": "Matt Travi <npm@travi.org> (https://matt.travi.org/)",
   "repository": "travi/language-scaffolder-prompts",
   "bugs": "https://github.com/travi/language-scaffolder-prompts/issues",
   "homepage": "https://npm.im/@travi/language-scaffolder-prompts",
-  "main": "lib/index.cjs.js",
-  "module": "lib/index.es.js",
+  "exports": "./lib/index.js",
+  "main": "./lib/index.js",
   "sideEffects": false,
   "scripts": {
     "pretest": "run-s build",
     "test": "npm-run-all --print-label --parallel lint:* --parallel test:*",
     "lint:sensitive": "ban",
     "test:unit": "cross-env NODE_ENV=test c8 run-s test:unit:base",
-    "test:unit:base": "DEBUG=any mocha --recursive test/unit",
+    "test:unit:base": "DEBUG=any vitest run",
     "lint:js": "eslint . --cache",
     "lint:md": "remark . --frail",
     "clean": "rimraf lib/",
@@ -24,7 +28,10 @@
     "watch": "run-s 'build:js -- --watch'",
     "prepack": "run-s build",
     "prepare": "husky install",
-    "lint:publish": "publint"
+    "lint:publish": "publint --strict",
+    "lint:js:fix": "run-s 'lint:js -- --fix'",
+    "lint:lockfile": "lockfile-lint",
+    "lint:engines": "ls-engines"
   },
   "files": [
     "lib/"
@@ -33,21 +40,20 @@
     "access": "public",
     "provenance": true
   },
+  "packageManager": "npm@10.8.3+sha256.b7dc7eb48d7479b93668e913c7ad686ab2aa71c705d4a56b5323d1bffdba2972",
   "devDependencies": {
-    "@babel/register": "7.24.6",
     "@travi/any": "3.1.2",
-    "@travi/babel-preset": "3.0.131",
     "@travi/eslint-config": "5.0.10",
-    "@travi/eslint-config-mocha": "1.0.25",
     "ban-sensitive-files": "1.10.6",
     "c8": "10.1.2",
-    "chai": "4.5.0",
     "commitlint-config-travi": "1.4.50",
     "cross-env": "7.0.3",
     "cz-conventional-changelog": "3.3.0",
     "husky": "9.1.6",
-    "inquirer": "8.2.6",
-    "mocha": "10.7.3",
+    "inquirer": "11.0.2",
+    "jest-when": "3.6.0",
+    "lockfile-lint": "4.14.0",
+    "ls-engines": "0.9.3",
     "npm-run-all2": "6.2.3",
     "publint": "0.2.11",
     "remark-cli": "12.0.1",
@@ -55,9 +61,9 @@
     "rimraf": "6.0.1",
     "rollup": "4.22.4",
     "rollup-plugin-auto-external": "2.0.0",
-    "sinon": "19.0.2"
+    "vitest": "2.1.1"
   },
   "peerDependencies": {
-    "inquirer": "^6.0.0 || ^7.0.0 || ^8.0.0"
+    "inquirer": "^6.0.0 || ^7.0.0 || ^8.0.0 || ^11.0.0"
   }
 }

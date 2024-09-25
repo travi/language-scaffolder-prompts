@@ -1,9 +1,6 @@
-import {Separator} from 'inquirer';
-
 import {questionNames} from './question-names.js';
-import filterChoicesByVisibility from './filter-by-visibility.js';
 
-export default function ({vcs, ciServices, visibility, pathWithinParent}) {
+export default function ({vcs, ciServices, pathWithinParent}) {
   return [
     {
       name: questionNames.UNIT_TESTS,
@@ -22,7 +19,7 @@ export default function ({vcs, ciServices, visibility, pathWithinParent}) {
         name: questionNames.CI_SERVICE,
         type: 'list',
         message: 'Which continuous integration service will be used?',
-        choices: [...Object.keys(filterChoicesByVisibility(ciServices, visibility)), new Separator(), 'Other']
+        choices: [...Object.keys(ciServices), 'Other']
       }]
       : []
   ];

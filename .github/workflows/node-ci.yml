@@ -15,6 +15,24 @@ env:
 permissions:
   contents: read
 jobs:
+  verify-matrix:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node:
+          - 18.19.0
+          - 20.6.1
+          - 22.0.0
+    steps:
+      - uses: actions/checkout@v4.1.7
+      - name: Setup node
+        uses: actions/setup-node@v4.0.3
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm clean-install
+      - run: corepack npm audit signatures
+      - run: npm test
   verify:
     runs-on: ubuntu-latest
     steps:
@@ -30,6 +48,7 @@ jobs:
   release:
     needs:
       - verify
+      - verify-matrix
     permissions:
       contents: write
       id-token: write

@@ -3,7 +3,7 @@ repository:
   description: >-
     shared Inquirer prompt definitions for language scaffolders used as part of
     the project scaffolder
-  homepage: 'https://npm.im/@travi/language-scaffolder-prompts'
+  homepage: https://npm.im/@travi/language-scaffolder-prompts
   private: false
   has_wiki: false
   has_projects: false

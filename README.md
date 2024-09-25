@@ -18,6 +18,7 @@ used as part of the [project scaffolder](https://github.com/travi/project-scaffo
 
 [![npm][npm-badge]][npm-link]
 [![MIT license][license-badge]][license-link]
+![node][node-badge]
 
 <!--consumer-badges end -->
 
@@ -58,7 +59,7 @@ $ npm test
 
 [license-link]: LICENSE
 
-[license-badge]: https://img.shields.io/github/license/travi/language-scaffolder-prompts.svg
+[license-badge]: https://img.shields.io/github/license/travi/language-scaffolder-prompts.svg?logo=opensourceinitiative
 
 [coverage-link]: https://codecov.io/github/travi/language-scaffolder-prompts
 
@@ -89,3 +90,5 @@ $ npm test
 [github-actions-ci-badge]: https://img.shields.io/github/actions/workflow/status/travi/language-scaffolder-prompts/node-ci.yml.svg?branch=master&logo=github
 
 [slsa-badge]: https://slsa.dev/images/gh-badge-level2.svg
+
+[node-badge]: https://img.shields.io/node/v/@travi/language-scaffolder-prompts?logo=node.js
