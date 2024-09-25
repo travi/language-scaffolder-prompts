@@ -58,7 +58,7 @@ $ npm test
 
 [license-link]: LICENSE
 
-[license-badge]: https://img.shields.io/github/license/travi/language-scaffolder-prompts.svg
+[license-badge]: https://img.shields.io/github/license/travi/language-scaffolder-prompts.svg?logo=opensourceinitiative
 
 [coverage-link]: https://codecov.io/github/travi/language-scaffolder-prompts
 
