@@ -7,8 +7,9 @@
   "repository": "travi/language-scaffolder-prompts",
   "bugs": "https://github.com/travi/language-scaffolder-prompts/issues",
   "homepage": "https://npm.im/@travi/language-scaffolder-prompts",
-  "main": "lib/index.cjs.js",
-  "module": "lib/index.es.js",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": "./lib/index.js",
   "sideEffects": false,
   "scripts": {
     "pretest": "run-s build",
@@ -24,7 +25,7 @@
     "watch": "run-s 'build:js -- --watch'",
     "prepack": "run-s build",
     "prepare": "husky install",
-    "lint:publish": "publint",
+    "lint:publish": "publint --strict",
     "lint:js:fix": "run-s 'lint:js -- --fix'",
     "lint:lockfile": "lockfile-lint"
   },
@@ -37,9 +38,7 @@
   },
   "packageManager": "npm@10.8.3+sha256.b7dc7eb48d7479b93668e913c7ad686ab2aa71c705d4a56b5323d1bffdba2972",
   "devDependencies": {
-    "@babel/register": "7.24.6",
     "@travi/any": "3.1.2",
-    "@travi/babel-preset": "3.0.131",
     "@travi/eslint-config": "5.0.10",
     "ban-sensitive-files": "1.10.6",
     "c8": "10.1.2",
