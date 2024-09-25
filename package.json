@@ -46,7 +46,7 @@
     "cross-env": "7.0.3",
     "cz-conventional-changelog": "3.3.0",
     "husky": "9.1.6",
-    "inquirer": "8.2.6",
+    "inquirer": "11.0.2",
     "jest-when": "3.6.0",
     "lockfile-lint": "4.14.0",
     "npm-run-all2": "6.2.3",
@@ -59,6 +59,6 @@
     "vitest": "2.1.1"
   },
   "peerDependencies": {
-    "inquirer": "^6.0.0 || ^7.0.0 || ^8.0.0"
+    "inquirer": "^6.0.0 || ^7.0.0 || ^8.0.0 || ^11.0.0"
   }
 }
