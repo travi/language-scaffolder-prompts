@@ -61,7 +61,7 @@
     "rimraf": "6.0.1",
     "rollup": "4.40.0",
     "rollup-plugin-auto-external": "2.0.0",
-    "vitest": "3.1.1"
+    "vitest": "3.1.2"
   },
   "peerDependencies": {
     "inquirer": "^6.0.0 || ^7.0.0 || ^8.0.0 || ^11.0.0 || ^12.0.0"
