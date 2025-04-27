@@ -52,7 +52,7 @@
     "husky": "9.1.7",
     "inquirer": "12.6.0",
     "jest-when": "3.7.0",
-    "lockfile-lint": "4.14.0",
+    "lockfile-lint": "4.14.1",
     "ls-engines": "0.9.3",
     "npm-run-all2": "7.0.2",
     "publint": "0.3.12",
