@@ -43,7 +43,7 @@
   "packageManager": "npm@11.4.2+sha512.f90c1ec8b207b625d6edb6693aef23dacb39c38e4217fe8c46a973f119cab392ac0de23fe3f07e583188dae9fd9108b3845ad6f525b598742bd060ebad60bff3",
   "devDependencies": {
     "@travi/any": "3.1.2",
-    "@travi/eslint-config": "5.0.11",
+    "@travi/eslint-config": "5.0.12",
     "ban-sensitive-files": "1.10.8",
     "c8": "10.1.3",
     "commitlint-config-travi": "1.4.57",
