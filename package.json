@@ -50,7 +50,7 @@
     "cross-env": "10.1.0",
     "cz-conventional-changelog": "3.3.0",
     "husky": "9.1.7",
-    "inquirer": "13.4.1",
+    "inquirer": "13.4.2",
     "jest-when": "4.0.2",
     "lockfile-lint": "5.0.0",
     "ls-engines": "0.9.4",
