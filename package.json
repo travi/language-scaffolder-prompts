@@ -50,7 +50,7 @@
     "cross-env": "10.1.0",
     "cz-conventional-changelog": "3.3.0",
     "husky": "9.1.7",
-    "inquirer": "13.4.3",
+    "inquirer": "14.0.0",
     "jest-when": "4.0.3",
     "lockfile-lint": "5.0.0",
     "ls-engines": "0.9.4",
@@ -64,6 +64,6 @@
     "vitest": "4.1.7"
   },
   "peerDependencies": {
-    "inquirer": "^6.0.0 || ^7.0.0 || ^8.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0"
+    "inquirer": "^6.0.0 || ^7.0.0 || ^8.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0 || ^14.0.0"
   }
 }
